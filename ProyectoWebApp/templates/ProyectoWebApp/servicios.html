@@ -1,0 +1,15 @@
+{% extends "ProyectoWebApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+   <p style="color:fff;">Total servicios {{ servicios|length }}</p>
+   <br />
+   {% for servicio in servicios %}
+    <h1 style="color:fff;"> {{ servicio.titulo }} </h1>
+    <p style="color:fff;">{{ servicio.contenido }}</p>
+    <p><img src="{{ servicio.imagen.url }}"></p>
+    <br />
+   {% endfor%}
+
+{% endblock %}
